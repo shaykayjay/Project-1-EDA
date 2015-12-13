@@ -1,3 +1,4 @@
+plot.new()
 library(sqldf)
 library(ggplot2)
 library(datasets)
@@ -16,7 +17,8 @@ with(df, {
               ylim=range(c(Sub_metering_1,Sub_metering_2, Sub_metering_3)))
     lines(DateTime, Sub_metering_2, col = "red")
     lines(DateTime, Sub_metering_3, col = "blue")
-    legend("topright", lty = 1, col = c("black","red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+    legend("topright", lty = 1, col = c("black","red", "blue"), legend = c("Sub_metering_1   ", "Sub_metering_2   ", "Sub_metering_3   "),
+           cex=0.70)
 })
 
 dev.copy(png, width=480, height=480, file = "plot3.png")
